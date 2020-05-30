@@ -1,18 +1,18 @@
-import { combineReducers } from "redux";
-import { VIEW_ITEM_DETAIL, FILTER_ITEM } from "./actions";
+import { combineReducers } from 'redux';
+import { VIEW_ITEM_DETAIL, FILTER_ITEM } from './actions';
 
 const initialState = {
   filter: [],
   items: [
     {
-      name: "Spagetti",
+      name: 'Spagetti',
       ingredients: [],
       recipe: [],
     },
   ],
 };
 
-const itemsReducer = (state = initialState, action) => {
+const selectItemReducer = (state = initialState, action) => {
   switch (action.type) {
     case VIEW_ITEM_DETAIL:
       return action.id;
@@ -31,7 +31,7 @@ const filterReducer = (state = initialState, action) => {
 };
 
 const reducer = combineReducers({
-  itemsReducer,
+  selectItemReducer,
   filterReducer,
 });
 

@@ -1,6 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import { createStore } from "react-redux";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createStore } from 'react-redux';
+import App from './App';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
