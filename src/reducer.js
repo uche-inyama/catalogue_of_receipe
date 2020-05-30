@@ -1,10 +1,38 @@
+import { combineReducers } from "redux";
+import { VIEW_ITEM_DETAIL, FILTER_ITEM } from "./actions";
+
 const initialState = {
   filter: [],
   items: [
     {
-      name: 'Spagetti',
+      name: "Spagetti",
       ingredients: [],
       recipe: [],
     },
   ],
 };
+
+const itemsReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case VIEW_ITEM_DETAIL:
+      return action.id;
+    default:
+      return state;
+  }
+};
+
+const filterReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case FILTER_ITEM:
+      return action.ingredients;
+    default:
+      return state;
+  }
+};
+
+const reducer = combineReducers({
+  itemsReducer,
+  filterReducer,
+});
+
+export default reducer;
