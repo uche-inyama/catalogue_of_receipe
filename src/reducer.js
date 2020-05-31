@@ -1,30 +1,16 @@
-import { combineReducers } from 'redux';
-import { INITIALIZE_ITEMS, FILTER_ITEM } from './actions';
+import { combineReducers } from "redux";
+import { INITIALIZE_ITEMS, FILTER_ITEM } from "./actions";
 
 const initialState = {
-  filter: 'All',
+  searchText: "",
   items: [
     {
-      name: 'Spagetti',
+      name: "Spagetti",
       ingredients: [],
       recipe: [],
     },
   ],
 };
-
-// const selectItemReducer = (state = [], action) => {
-//   switch (action.type) {
-//     case VIEW_ITEM_DETAIL:
-//       state.items.filter((item, index) => {
-//         if (index === action.id) {
-//           return state.items[index];
-//         }
-//       });
-//       break;
-//     default:
-//       return state;
-//   }
-// };
 
 export const itemsReducer = (state = [], action) => {
   switch (action.type) {
@@ -35,24 +21,16 @@ export const itemsReducer = (state = [], action) => {
   }
 };
 
-const filterReducer = (state = 'All', action) => {
-  if (action.type === FILTER_ITEM) {
-    if (action.filter === 'All') {
+export const filterReducer = (state = {}, action) => {
+  switch (action.type) {
+    case FILTER_ITEM:
       return {
-        ...action.state,
-        items: action.state.items,
-        filter: action.filter,
+        ...state,
+        searchText: action.searchText,
       };
-    }
-    return {
-      ...action.state,
-      items: action.state.items.ingredients.filter(
-        (ingredient) => ingredient === action.filter,
-      ),
-      filter: action.filter,
-    };
+    default:
+      return state;
   }
-  return state;
 };
 
 const reducer = combineReducers({

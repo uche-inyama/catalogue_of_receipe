@@ -7,8 +7,7 @@ export const initializeItems = (itemsArray) => ({
   itemsArray,
 });
 
-export const filterItem = (filter, state) => ({
+export const filterItem = (searchText) => ({
   type: FILTER_ITEM,
-  filter,
-  state,
+  searchText,
 });
