@@ -1,12 +1,12 @@
 import React from "react";
 
-const Item = () => (
+const Item = ({ name, total_recipe }) => (
   <div>
     <div className="image-wrapper">
-      <div>Hello world</div>
+      <div>image</div>
     </div>
-    <div className="receipe-category">Delectable Main Course</div>
-    <div className="number-of-receipes">76 receipes</div>
+    <div className="receipe-category">{name}</div>
+    <div className="number-of-receipes">{total_recipe}</div>
   </div>
 );
 

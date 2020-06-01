@@ -1,11 +1,11 @@
 import React from "react";
-import Item from "./components/item";
+import Itemlist from "./components/itemlist";
 import ItemDetail from "./components/itemDetail";
+import Connecteditemslist from "./container/items";
 
 const App = () => (
   <div className="App">
-    <Item />
-    <ItemDetail />
+    <Connecteditemslist />
   </div>
 );
 export default App;

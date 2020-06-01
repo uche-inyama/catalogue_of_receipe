@@ -5,14 +5,15 @@ const initialState = {
   searchText: "",
   items: [
     {
-      name: "Spagetti",
+      id: 1,
+      name: "DECANDENT FALL DESSERT",
       ingredients: [],
-      recipe: [],
+      recipe: ["aba", "ada", "chika"],
     },
   ],
 };
 
-export const itemsReducer = (state = [], action) => {
+export const itemsReducer = (state = initialState.items, action) => {
   switch (action.type) {
     case INITIALIZE_ITEMS:
       return [...state, ...action.itemsArray];
