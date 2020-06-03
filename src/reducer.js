@@ -1,22 +1,35 @@
-import { combineReducers } from "redux";
-import { INITIALIZE_ITEMS, FILTER_ITEM } from "./actions";
+import { combineReducers } from 'redux';
+import {
+  FILTER_ITEM,
+  REQUEST_POSTS,
+  RECEIVE_POSTS,
+  INVALIDATE_RECIPE,
+} from './actions';
 
-const initialState = {
-  searchText: "",
-  items: [
-    {
-      id: 1,
-      name: "DECANDENT FALL DESSERT",
-      ingredients: [],
-      recipe: ["aba", "ada", "chika"],
-    },
-  ],
-};
-
-export const itemsReducer = (state = initialState.items, action) => {
+const recipePosts = (
+  state = {
+    isFetching: false,
+    didInvalidate: false,
+    results: [],
+  },
+  action,
+) => {
   switch (action.type) {
-    case INITIALIZE_ITEMS:
-      return [...state, ...action.itemsArray];
+    case INVALIDATE_RECIPE:
+      return { ...state, didInvalidate: true };
+    case REQUEST_POSTS:
+      return {
+        ...state,
+        isFetching: true,
+        didInvalidate: false,
+      };
+    case RECEIVE_POSTS:
+      return {
+        ...state,
+        isFetching: false,
+        didInvalidate: false,
+        results: action.posts,
+      };
     default:
       return state;
   }
@@ -36,7 +49,7 @@ export const filterReducer = (state = {}, action) => {
 
 const reducer = combineReducers({
   filter: filterReducer,
-  items: itemsReducer,
+  recipes: recipePosts,
 });
 
 export default reducer;

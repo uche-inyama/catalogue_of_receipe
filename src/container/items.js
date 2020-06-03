@@ -1,12 +1,11 @@
-import React from "react";
-import { connect } from "react-redux";
-import Itemlist from "../components/itemlist";
+import { connect } from 'react-redux';
+import Itemlist from '../components/itemlist';
 
-const mapStateToProps = (state) => {
-  return {
-    details: state.items,
-  };
-};
+const mapStateToProps = (state) => ({
+  details: state.items,
+  recipes: state.recipes.results,
+  filter: state.filter,
+});
 
 const Connecteditemslist = connect(mapStateToProps)(Itemlist);
 
