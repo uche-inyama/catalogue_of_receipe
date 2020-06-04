@@ -1,9 +1,9 @@
-const axios = require('axios').default;
+const axios = require("axios").default;
 
-export const FILTER_ITEM = 'FILTER_ITEM';
-export const REQUEST_POSTS = 'REQUEST_POSTS';
-export const RECEIVE_POSTS = 'RECEIVE_POSTS';
-export const INVALIDATE_RECIPE = 'INVALIDATE_RECIPE';
+export const FILTER_ITEM = "FILTER_ITEM";
+export const REQUEST_POSTS = "REQUEST_POSTS";
+export const RECEIVE_POSTS = "RECEIVE_POSTS";
+export const INVALIDATE_RECIPE = "INVALIDATE_RECIPE";
 
 export const requestPosts = () => ({
   type: REQUEST_POSTS,
@@ -25,11 +25,13 @@ export const invalidateRecipe = () => ({
 });
 
 export function fetchPosts() {
-  const apiKey = 'd9be2fa66d25427b9e449d7514872458';
+  const apiKey = "d9be2fa66d25427b9e449d7514872458";
   return (dispatch) => {
     dispatch(requestPosts());
     return axios
-      .get(`https://api.spoonacular.com/recipes/search?apiKey=${apiKey}`)
+      .get(
+        `https://api.spoonacular.com/recipes/search?apiKey=${apiKey}&number=20`
+      )
       .then(({ data }) => data)
       .then((data) => {
         dispatch(receivePosts(data));

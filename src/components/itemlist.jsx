@@ -15,7 +15,7 @@ const Itemlist = ({ dispatch, recipes }) => {
             id={recipe.id}
             key={recipe.id}
             name={recipe.title}
-            time_to_prepare={recipe.readyInMinutes}
+            timeToPrepare={recipe.readyInMinutes}
             image={recipe.image}
           />
         </li>
