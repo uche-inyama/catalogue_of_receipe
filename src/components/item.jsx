@@ -4,14 +4,12 @@ import PropTypes from "prop-types";
 
 const Item = ({ name, timeToPrepare, id }) => {
   const url = `https://spoonacular.com/recipeImages/${id}-556x370.jpg`;
+  const params = `/${id}`;
   return (
     <div>
-      <NavLink to="/detail">
+      <NavLink to={params}>
         <img src={url} alt={name} />
       </NavLink>
-      {/* <div className="image-wrapper">
-        <img src={url} alt={name} />
-      </div> */}
       <div className="receipe-category">{name}</div>
       <div className="number-of-receipes">{timeToPrepare} minutes</div>
     </div>

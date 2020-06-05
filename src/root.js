@@ -8,8 +8,8 @@ const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
       <Switch>
-        <Route path="/" component={App} />
-        <Route path="/detail" component={ItemDetail} />
+        <Route path="/" exact component={App} />
+        <Route path="/:id" component={ItemDetail} />
       </Switch>
     </Router>
   </Provider>

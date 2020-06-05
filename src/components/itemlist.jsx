@@ -28,4 +28,5 @@ Itemlist.propTypes = {
   dispatch: PropTypes.func,
   recipes: PropTypes.array,
 };
+
 export default Itemlist;
