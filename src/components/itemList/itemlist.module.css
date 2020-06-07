@@ -1,0 +1,5 @@
+.grid_List {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}

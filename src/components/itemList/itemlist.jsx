@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
-import Item from "./item";
-import { fetchPosts } from "../actions";
+import Item from "../item/item.jsx";
+import { fetchPosts } from "../../actions";
 import PropTypes from "prop-types";
+import style from "./itemlist.module.css";
 
 const Itemlist = ({ dispatch, recipes }) => {
   useEffect(() => {
     dispatch(fetchPosts());
   }, []);
   return (
-    <ul>
+    <ul className={style.grid_List}>
       {recipes.map((recipe) => (
         <li>
           <Item

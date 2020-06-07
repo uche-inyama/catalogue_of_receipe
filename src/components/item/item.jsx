@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
+import style from "./item.module.css";
 
 const Item = ({ name, timeToPrepare, id }) => {
   const url = `https://spoonacular.com/recipeImages/${id}-556x370.jpg`;
@@ -10,8 +11,8 @@ const Item = ({ name, timeToPrepare, id }) => {
       <NavLink to={params}>
         <img src={url} alt={name} />
       </NavLink>
-      <div className="receipe-category">{name}</div>
-      <div className="number-of-receipes">{timeToPrepare} minutes</div>
+      <div className={style.receipe_category}>Recipe: {name}</div>
+      {/* <div className="number-of-receipes">{timeToPrepare} minutes</div> */}
     </div>
   );
 };
