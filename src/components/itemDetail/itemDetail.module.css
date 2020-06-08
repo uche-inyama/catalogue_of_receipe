@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap");
 .item_detail {
+  background-color: #1d2026;
+  color: #fcda9a;
   font-family: "sans-serif", Roboto;
   line-height: 2;
+  width: 100%;
+}
+h3,
+.status {
+  color: #fcda9a;
+}
+html {
+  height: 100vh;
+  background-color: #1d2026;
 }

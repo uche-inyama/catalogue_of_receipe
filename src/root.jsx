@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Provider } from "react-redux";
+import PropTypes from "prop-types";
 import App from "./App";
 import ItemDetail from "./components/itemDetail/itemDetail";
-import { Provider } from "react-redux";
 
 const Root = ({ store }) => (
   <Provider store={store}>
@@ -15,4 +16,7 @@ const Root = ({ store }) => (
   </Provider>
 );
 
+Root.propType = {
+  store: PropTypes.object,
+};
 export default Root;

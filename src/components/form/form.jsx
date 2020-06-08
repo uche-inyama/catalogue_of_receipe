@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import style from "./form.module.css";
 
@@ -12,6 +12,7 @@ const Form = ({ onFilterClick }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onFilterClick(value);
+    setValue("");
   };
   return (
     <form onSubmit={handleSubmit} className={style.form}>
