@@ -1,10 +1,10 @@
-import { connect } from 'react-redux';
-import Form from '../components/form/form';
-import { filterItem } from '../actions';
+import { connect } from "react-redux";
+import Form from "../components/form/form";
+import { getRecipeByIngredient } from "../actions";
 
 const mapDispatchToProps = (dispatch) => ({
-  onFilterClick: (searchText) => {
-    dispatch(filterItem(searchText));
+  onFilterClick: (ingredient) => {
+    dispatch(getRecipeByIngredient(ingredient));
   },
 });
 

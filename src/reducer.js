@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 import {
   FILTER_ITEM,
   REQUEST_POSTS,
@@ -6,7 +6,7 @@ import {
   INVALIDATE_RECIPE,
   RECEIVE_RECIPE,
   REQUEST_RECIPE,
-} from './actions';
+} from "./actions";
 
 const recipePosts = (
   state = {
@@ -14,7 +14,7 @@ const recipePosts = (
     didInvalidate: false,
     results: [],
   },
-  action,
+  action
 ) => {
   switch (action.type) {
     case INVALIDATE_RECIPE:
@@ -32,13 +32,6 @@ const recipePosts = (
         didInvalidate: false,
         results: action.posts,
       };
-    case FILTER_ITEM:
-      return {
-        ...state,
-        results: state.results.filter(
-          (result) => result.title === action.searchText,
-        ),
-      };
     default:
       return state;
   }
@@ -49,7 +42,7 @@ const detailedRecipeReducer = (
     isFetching: false,
     recipe: null,
   },
-  action,
+  action
 ) => {
   switch (action.type) {
     case REQUEST_RECIPE:
