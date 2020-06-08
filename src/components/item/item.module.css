@@ -1,5 +1,23 @@
 .receipe_category {
   font-weight: 400;
   font-family: "sans-serif", Roboto;
-  padding: 10px 0;
+  padding-left: 36px;
+}
+
+a {
+  height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.imageWrapper {
+  display: flex;
+}
+.image {
+  width: 90%;
+  height: 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

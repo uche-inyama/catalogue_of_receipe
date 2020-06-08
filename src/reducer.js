@@ -16,6 +16,9 @@ const recipePosts = (
   },
   action
 ) => {
+  // const filteredResult = state.results.filter(
+  //   (result) => result.title === action.searchText
+  // );
   switch (action.type) {
     case INVALIDATE_RECIPE:
       return { ...state, didInvalidate: true };
@@ -31,6 +34,13 @@ const recipePosts = (
         isFetching: false,
         didInvalidate: false,
         results: action.posts,
+      };
+    case FILTER_ITEM:
+      return {
+        ...state,
+        results: state.results.filter(
+          (result) => result.title === action.searchText
+        ),
       };
     default:
       return state;
@@ -61,20 +71,19 @@ const detailedRecipeReducer = (
   }
 };
 
-export const filterReducer = (state = {}, action) => {
-  switch (action.type) {
-    case FILTER_ITEM:
-      return {
-        ...state,
-        searchText: action.searchText,
-      };
-    default:
-      return state;
-  }
-};
+// export const filterReducer = (state = {}, action) => {
+//   switch (action.type) {
+//     case FILTER_ITEM:
+//       return {
+//         ...state,
+//         results: filteredResult,
+//       };
+//     default:
+//       return state;
+//   }
+// };
 
 const reducer = combineReducers({
-  filter: filterReducer,
   recipes: recipePosts,
   detailedRecipe: detailedRecipeReducer,
 });

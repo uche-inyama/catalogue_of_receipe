@@ -9,19 +9,17 @@ const Itemlist = ({ dispatch, recipes }) => {
     dispatch(fetchPosts());
   }, []);
   return (
-    <ul className={style.grid_List}>
+    <div className={style.grid_List}>
       {recipes.map((recipe) => (
-        <li>
-          <Item
-            id={recipe.id}
-            key={recipe.id}
-            name={recipe.title}
-            timeToPrepare={recipe.readyInMinutes}
-            image={recipe.image}
-          />
-        </li>
+        <Item
+          id={recipe.id}
+          key={recipe.id}
+          name={recipe.title}
+          timeToPrepare={recipe.readyInMinutes}
+          image={recipe.image}
+        />
       ))}
-    </ul>
+    </div>
   );
 };
 

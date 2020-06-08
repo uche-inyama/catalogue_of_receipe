@@ -9,7 +9,12 @@ const Item = ({ name, timeToPrepare, id }) => {
   return (
     <div>
       <NavLink to={params}>
-        <img src={url} alt={name} />
+        <div
+          className={style.image}
+          style={{
+            backgroundImage: `url(${url})`,
+          }}
+        />
       </NavLink>
       <div className={style.receipe_category}>Recipe: {name}</div>
       {/* <div className="number-of-receipes">{timeToPrepare} minutes</div> */}

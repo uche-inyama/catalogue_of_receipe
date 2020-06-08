@@ -20,6 +20,7 @@ const ItemDetail = ({ dispatch, recipe, isFetching }) => {
     const { steps } = recipe[0];
     return (
       <>
+        <h3>Recipe Instructions: </h3>
         <ul className={style.item_detail}>
           {steps.map(({ number, step }) => (
             <li key={number}>{step}</li>
