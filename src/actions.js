@@ -1,4 +1,4 @@
-const axios = require('axios').default;
+const axios = require('axios');
 
 export const FILTER_ITEM = 'FILTER_ITEM';
 export const REQUEST_POSTS = 'REQUEST_POSTS';
