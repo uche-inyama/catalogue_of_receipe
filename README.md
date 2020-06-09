@@ -5,7 +5,7 @@
 > Catalogue of Recipes is an application that shows a list of recipes, it has a details page that shows
 > how to prepare each recipe. The items can be filtered by ingredients (shrimp, broccoli, etc.)
 
-![Screenshot](https://user-images.githubusercontent.com/46329537/81774954-b1d16a80-94e3-11ea-94e2-99a5e5d70568.png)
+![Screenshot](https://user-images.githubusercontent.com/46329537/84108147-6b562980-aa17-11ea-9d55-365c0b811cbf.png)
 
 Additional description about the project and its features.
 
@@ -19,7 +19,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://sleepy-fjord-84167.herokuapp.com/)
+[Live Demo Link](https://practical-bose-9026ec.netlify.app/)
 
 ## Getting Started
 
@@ -45,7 +45,7 @@ Open http://localhost:3000/ in your browser
 
 ### Deployment:
 
-https://sleepy-fjord-84167.herokuapp.com/
+https://practical-bose-9026ec.netlify.app/
 
 ## Author
 
