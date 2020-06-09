@@ -1,10 +1,9 @@
-/* eslint-disable quotes */
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import style from "./form.module.css";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import style from './form.module.css';
 
 const Form = ({ onFilterClick }) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -13,7 +12,7 @@ const Form = ({ onFilterClick }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onFilterClick(value);
-    setValue("");
+    setValue('');
   };
   return (
     <form onSubmit={handleSubmit} className={style.form}>

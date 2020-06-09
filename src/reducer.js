@@ -1,13 +1,11 @@
-/* eslint-disable comma-dangle */
-/* eslint-disable quotes */
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 import {
   REQUEST_POSTS,
   RECEIVE_POSTS,
   INVALIDATE_RECIPE,
   RECEIVE_RECIPE,
   REQUEST_RECIPE,
-} from "./actions";
+} from './actions';
 
 const recipePosts = (
   state = {
@@ -15,7 +13,7 @@ const recipePosts = (
     didInvalidate: false,
     results: [],
   },
-  action
+  action,
 ) => {
   switch (action.type) {
     case INVALIDATE_RECIPE:
@@ -43,7 +41,7 @@ const detailedRecipeReducer = (
     isFetching: false,
     recipe: null,
   },
-  action
+  action,
 ) => {
   switch (action.type) {
     case REQUEST_RECIPE:

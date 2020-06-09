@@ -1,10 +1,9 @@
-/* eslint-disable quotes */
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { getRecipeDetails } from "../../actions";
-import style from "./itemDetail.module.css";
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { getRecipeDetails } from '../../actions';
+import style from './itemDetail.module.css';
 
 const ItemDetail = ({ dispatch, recipe, isFetching }) => {
   const { id } = useParams();

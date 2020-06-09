@@ -1,8 +1,7 @@
-/* eslint-disable quotes */
-import React from "react";
-import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
-import style from "./item.module.css";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import style from './item.module.css';
 
 const Item = ({ name, id }) => {
   const url = `https://spoonacular.com/recipeImages/${id}-556x370.jpg`;

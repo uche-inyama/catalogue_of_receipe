@@ -1,9 +1,8 @@
-/* eslint-disable quotes */
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import Item from "../item/item";
-import { fetchPosts } from "../../actions";
-import style from "./itemlist.module.css";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import Item from '../item/item';
+import { fetchPosts } from '../../actions';
+import style from './itemlist.module.css';
 
 const Itemlist = ({ dispatch, recipes }) => {
   useEffect(() => {
