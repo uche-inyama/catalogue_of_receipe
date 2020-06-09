@@ -1,6 +1,6 @@
-import React from "react";
+/* eslint-disable quotes */
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getRecipeDetails } from "../../actions";
@@ -34,7 +34,7 @@ const ItemDetail = ({ dispatch, recipe, isFetching }) => {
       </>
     );
   }
-  return <h2>Recipe's Detail not found</h2>;
+  return <h2>Recipe Detail not found</h2>;
 };
 
 const mapStateToProps = (state) => {
@@ -45,11 +45,11 @@ const mapStateToProps = (state) => {
   };
 };
 
-ItemDetail.propType = {
-  isFetching: PropTypes.bool,
-  dispatch: PropTypes.func,
-  recipe: PropTypes.array,
-  steps: PropTypes.array,
+ItemDetail.propTypes = {
+  isFetching: PropTypes.bool.isRequired,
+  dispatch: PropTypes.func.isRequired,
+  recipe: PropTypes.arrayOf.isRequired,
+  steps: PropTypes.arrayOf.isRequired,
 };
 
 export default connect(mapStateToProps)(ItemDetail);

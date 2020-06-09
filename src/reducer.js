@@ -1,6 +1,7 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable quotes */
 import { combineReducers } from "redux";
 import {
-  FILTER_ITEM,
   REQUEST_POSTS,
   RECEIVE_POSTS,
   INVALIDATE_RECIPE,

@@ -1,7 +1,8 @@
+/* eslint-disable quotes */
 import React, { useEffect } from "react";
-import Item from "../item/item.jsx";
-import { fetchPosts } from "../../actions";
 import PropTypes from "prop-types";
+import Item from "../item/item";
+import { fetchPosts } from "../../actions";
 import style from "./itemlist.module.css";
 
 const Itemlist = ({ dispatch, recipes }) => {
@@ -24,8 +25,8 @@ const Itemlist = ({ dispatch, recipes }) => {
 };
 
 Itemlist.propTypes = {
-  dispatch: PropTypes.func,
-  recipes: PropTypes.array,
+  dispatch: PropTypes.func.isRequired,
+  recipes: PropTypes.arrayOf.isRequired,
 };
 
 export default Itemlist;

@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import React from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -16,13 +17,16 @@ const Item = ({ name, id }) => {
           }}
         />
       </NavLink>
-      <div className={style.receipe_category}>Recipe: {name}</div>
+      <div className={style.receipe_category}>
+        Recipe:
+        {name}
+      </div>
     </div>
   );
 };
 
 Item.propTypes = {
-  name: PropTypes.string,
-  id: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 export default Item;

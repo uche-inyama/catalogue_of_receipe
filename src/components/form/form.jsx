@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import style from "./form.module.css";
@@ -30,7 +31,7 @@ const Form = ({ onFilterClick }) => {
 };
 
 Form.propTypes = {
-  onFilterClick: PropTypes.func,
+  onFilterClick: PropTypes.func.isRequired,
 };
 
 export default Form;

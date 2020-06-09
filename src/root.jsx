@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
@@ -16,7 +17,7 @@ const Root = ({ store }) => (
   </Provider>
 );
 
-Root.propType = {
-  store: PropTypes.object,
+Root.propTypes = {
+  store: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 export default Root;
