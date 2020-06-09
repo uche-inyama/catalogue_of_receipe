@@ -1,6 +1,5 @@
-# Project Name
+# Project Name: Catalogue of Recipes
 
-## Catalogue of Recipes
 
 > Catalogue of Recipes is an application that shows a list of recipes, it has a details page that shows
 > how to prepare each recipe. The items can be filtered by ingredients (shrimp, broccoli, etc.)
