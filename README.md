@@ -19,7 +19,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://sleepy-fjord-84167.herokuapp.com/)
+[Live Demo Link](https://practical-bose-9026ec.netlify.app/)
 
 ## Getting Started
 
@@ -45,7 +45,7 @@ Open http://localhost:3000/ in your browser
 
 ### Deployment:
 
-https://sleepy-fjord-84167.herokuapp.com/
+https://practical-bose-9026ec.netlify.app/
 
 ## Author
 
