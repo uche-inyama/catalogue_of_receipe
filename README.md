@@ -1,6 +1,5 @@
-# Project Name
+# Project Name: Catalogue of Recipes
 
-## Catalogue of Recipes
 
 > Catalogue of Recipes is an application that shows a list of recipes, it has a details page that shows
 > how to prepare each recipe. The items can be filtered by ingredients (shrimp, broccoli, etc.)
@@ -33,9 +32,9 @@ To get the local copy up and running follow these simple example steps.
 
 ### Usage
 
-    - First run yarn.
+    - First run, yarn.
 
-    - Then run yarn start, to start the server.
+    - Then run, yarn start, to start the server.
 
 Open http://localhost:3000/ in your browser
 
