@@ -32,9 +32,9 @@ To get the local copy up and running follow these simple example steps.
 
 ### Usage
 
-    - First run yarn.
+    - First run, yarn.
 
-    - Then run yarn start, to start the server.
+    - Then run, yarn start, to start the server.
 
 Open http://localhost:3000/ in your browser
 
