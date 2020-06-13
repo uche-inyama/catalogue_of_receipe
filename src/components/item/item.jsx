@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import style from './item.module.css';
 
@@ -8,14 +8,14 @@ const Item = ({ name, id }) => {
   const params = `/${id}`;
   return (
     <div>
-      <NavLink to={params}>
+      <Link to={params}>
         <div
           className={style.image}
           style={{
             backgroundImage: `url(${url})`,
           }}
         />
-      </NavLink>
+      </Link>
       <div className={style.receipe_category}>
         Recipe:
         {name}

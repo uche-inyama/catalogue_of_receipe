@@ -2,13 +2,12 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getRecipeDetails } from '../../actions';
 import style from './itemDetail.module.css';
 
-const ItemDetail = ({ dispatch, recipe, isFetching }) => {
+const ItemDetail = ({ fetchRecipeDetail, recipe, isFetching }) => {
   const { id } = useParams();
   useEffect(() => {
-    dispatch(getRecipeDetails(id));
+    fetchRecipeDetail(id);
   }, []);
   if (isFetching) {
     return <div className={style.status}>loading...</div>;
@@ -46,7 +45,7 @@ const mapStateToProps = (state) => {
 
 ItemDetail.propTypes = {
   isFetching: PropTypes.bool.isRequired,
-  dispatch: PropTypes.func.isRequired,
+  fetchRecipeDetail: PropTypes.func.isRequired,
   recipe: PropTypes.arrayOf.isRequired,
   steps: PropTypes.arrayOf.isRequired,
 };
