@@ -14,7 +14,6 @@ export const requestPosts = () => ({
 export const receivePosts = (data) => ({
   type: RECEIVE_POSTS,
   posts: data.results,
-  receivedAt: Date.now(),
 });
 
 export const receiveRecipe = (data) => ({

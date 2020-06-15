@@ -34,7 +34,7 @@ describe('recipelists', () => {
         expect(root.findAllByType(Item).length).toEqual(0);
     });
 
-    it.only('renders list of Recipes when recipes array is not null', () => {
+    it('renders list of Recipes when recipes array is not null', () => {
         const recipes = [
             {
                 id: 1,

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import style from './itemDetail.module.css';
 
@@ -35,19 +34,11 @@ const ItemDetail = ({ fetchRecipeDetail, recipe, isFetching }) => {
   return <h2>Recipe Detail not found</h2>;
 };
 
-const mapStateToProps = (state) => {
-  const { isFetching, recipe } = state.detailedRecipe;
-  return {
-    recipe,
-    isFetching,
-  };
-};
-
 ItemDetail.propTypes = {
   isFetching: PropTypes.bool.isRequired,
   fetchRecipeDetail: PropTypes.func.isRequired,
-  recipe: PropTypes.arrayOf.isRequired,
-  steps: PropTypes.arrayOf.isRequired,
+  recipe: PropTypes.arrayOf(PropTypes.any).isRequired,
+  steps: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
-export default connect(mapStateToProps)(ItemDetail);
+export default ItemDetail;

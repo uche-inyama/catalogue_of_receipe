@@ -11,6 +11,14 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-const connectedItemDetail = connect(null, mapDispatchToProps)(ItemDetail);
+const mapStateToProps = (state) => {
+    const { isFetching, recipe } = state.detailedRecipe;
+    return {
+        recipe,
+        isFetching,
+    };
+};
+
+const connectedItemDetail = connect(mapStateToProps, mapDispatchToProps)(ItemDetail);
 
 export default connectedItemDetail;
