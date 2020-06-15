@@ -5,7 +5,7 @@ import {
   INVALIDATE_RECIPE,
   RECEIVE_RECIPE,
   REQUEST_RECIPE,
-} from './actions';
+} from '../action/actions';
 
 export const recipePosts = (
   state = {
@@ -64,5 +64,3 @@ export const reducer = combineReducers({
   recipes: recipePosts,
   detailedRecipe: detailedRecipeReducer,
 });
-
-// export default reducer;

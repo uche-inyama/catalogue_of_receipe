@@ -34,11 +34,16 @@ const ItemDetail = ({ fetchRecipeDetail, recipe, isFetching }) => {
   return <h2>Recipe Detail not found</h2>;
 };
 
+ItemDetail.defaultProps = {
+  recipe: null,
+  steps: [],
+};
+
 ItemDetail.propTypes = {
   isFetching: PropTypes.bool.isRequired,
   fetchRecipeDetail: PropTypes.func.isRequired,
-  recipe: PropTypes.arrayOf(PropTypes.any).isRequired,
-  steps: PropTypes.arrayOf(PropTypes.any).isRequired,
+  recipe: PropTypes.arrayOf(PropTypes.any),
+  steps: PropTypes.arrayOf(PropTypes.any),
 };
 
 export default ItemDetail;

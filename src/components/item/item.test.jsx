@@ -6,24 +6,26 @@ import Item from './item';
 
 let container = null;
 beforeEach(() => {
-    container = document.createElement('div');
-    document.body.appendChild(container);
+  container = document.createElement('div');
+  document.body.appendChild(container);
 });
 
 afterEach(() => {
-    unmountComponentAtNode(container);
-    container.remove();
-    container = null;
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
 });
 
-it("renders item", () => {
-    act(() => {
-        render(<BrowserRouter>
-            <Item
-                name={'uche'}
-                id={1}
-            />
-        </BrowserRouter>, container);
-    });
-    expect(container).toBeDefined;
-})
+it('renders item', () => {
+  act(() => {
+    render(
+      <BrowserRouter>
+        <Item
+          name="uche"
+          id={1}
+        />
+      </BrowserRouter>, container,
+    );
+  });
+  expect(container).toBeDefined();
+});

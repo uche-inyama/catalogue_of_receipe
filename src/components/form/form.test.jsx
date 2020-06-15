@@ -8,20 +8,20 @@ import Form from './form';
 let container = null;
 
 beforeEach(() => {
-    container = document.createElement('div');
-    document.body.appendChild(container);
+  container = document.createElement('div');
+  document.body.appendChild(container);
 });
 
 afterEach(() => {
-    unmountComponentAtNode(container);
-    container.remove();
-    container = null;
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
 });
 
-it("renders form", () => {
-    const onFilterClick = jest.fn();
-    act(() => {
-        render(<Form onFilterClick={onFilterClick} />, container);
-    });
-    expect(container).toBeDefined();
+it('renders form', () => {
+  const onFilterClick = jest.fn();
+  act(() => {
+    render(<Form onFilterClick={onFilterClick} />, container);
+  });
+  expect(container).toBeDefined();
 });

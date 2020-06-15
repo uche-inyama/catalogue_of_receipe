@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Itemlist from '../components/itemList/itemlist';
-import { fetchPosts } from '../actions';
+import { fetchPosts } from '../action/actions';
 
 const mapStateToProps = (state) => ({
   recipes: state.recipes.results,
