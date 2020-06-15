@@ -26,6 +26,9 @@
     "jsx-a11y/href-no-hash": [
       0
     ],
+    "jsx-a11y/img-has-alt": [
+      0
+    ],
     "import/no-unresolved": "off"
   },
   "ignorePatterns": [
@@ -33,3 +36,4 @@
     "build/"
   ]
 }
+// Definition for rule 'jsx-a11y/img-has-alt' was not found. (jsx-a11y/img-has-alt)
