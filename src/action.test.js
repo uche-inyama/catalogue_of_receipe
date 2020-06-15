@@ -6,7 +6,7 @@ import {
     requestPosts,
     receivePosts,
     receiveRecipe,
-    requestRecipe
+    requestRecipe,
 } from './actions';
 
 describe('actions', () => {

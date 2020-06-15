@@ -7,7 +7,7 @@ import {
   REQUEST_RECIPE,
 } from './actions';
 
-const recipePosts = (
+export const recipePosts = (
   state = {
     isFetching: false,
     didInvalidate: false,
@@ -36,7 +36,7 @@ const recipePosts = (
   }
 };
 
-const detailedRecipeReducer = (
+export const detailedRecipeReducer = (
   state = {
     isFetching: false,
     recipe: null,
@@ -60,9 +60,9 @@ const detailedRecipeReducer = (
   }
 };
 
-const reducer = combineReducers({
+export const reducer = combineReducers({
   recipes: recipePosts,
   detailedRecipe: detailedRecipeReducer,
 });
 
-export default reducer;
+// export default reducer;
