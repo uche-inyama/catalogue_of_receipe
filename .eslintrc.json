@@ -14,8 +14,7 @@
   },
   "parserOptions": {
     "ecmaFeatures": {
-      "jsx": true,
-      "modules": true
+      "jsx": true
     },
     "ecmaVersion": 2018,
     "sourceType": "module"
@@ -32,16 +31,13 @@
     ],
     "import/extensions": [
       "error",
-      "always",
+      "ignorePackages",
       {
         "js": "never",
+        "mjs": "never",
         "jsx": "never"
       }
     ],
     "import/no-unresolved": "off"
-  },
-  "ignorePatterns": [
-    "dist/",
-    "build/"
-  ]
+  }
 }
