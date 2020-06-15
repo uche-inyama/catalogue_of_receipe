@@ -29,13 +29,13 @@
     "jsx-a11y/img-has-alt": [
       0
     ],
-    "react/jsx-filename-extension": [
-      0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "js": "never",
+        "mjs": "never",
+        "jsx": "never"
       }
     ],
     "import/no-unresolved": "off"
