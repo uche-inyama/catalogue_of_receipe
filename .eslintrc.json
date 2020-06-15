@@ -29,6 +29,15 @@
     "jsx-a11y/img-has-alt": [
       0
     ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
     "import/no-unresolved": "off"
   },
   "ignorePatterns": [
