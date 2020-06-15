@@ -23,6 +23,9 @@
     "react"
   ],
   "rules": {
+    "jsx-a11y/href-no-hash": [
+      0
+    ],
     "import/no-unresolved": "off"
   },
   "ignorePatterns": [
