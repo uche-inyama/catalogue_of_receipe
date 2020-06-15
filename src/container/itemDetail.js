@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ItemDetail from '../components/itemDetail/itemDetail';
+import ItemDetail from '../components/itemDetail/itemDetail.jsx';
 import { getRecipeDetails } from '../action/actions';
 
 const mapDispatchToProps = (dispatch) => {

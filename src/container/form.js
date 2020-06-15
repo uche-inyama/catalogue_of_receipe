@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Form from '../components/form/form';
+import Form from '../components/form/form.jsx';
 import { getRecipeByIngredient } from '../action/actions';
 
 const mapDispatchToProps = (dispatch) => ({
