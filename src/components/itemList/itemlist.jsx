@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Item from '../item/item';
+import Item from '../item/item.jsx';
 import style from './itemlist.module.css';
 
 const Itemlist = ({ fetchRecipeLists, recipes }) => {

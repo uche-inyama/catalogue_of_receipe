@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
-import App from './App';
+import App from './App.jsx';
 import ConnectedItemDetail from './container/itemDetail';
 
 

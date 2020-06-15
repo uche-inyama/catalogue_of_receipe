@@ -2,8 +2,8 @@ import React from 'react';
 import { unmountComponentAtNode } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { create } from 'react-test-renderer';
-import ItemList from './itemlist';
-import Item from '../item/item';
+import ItemList from './itemlist.jsx';
+import Item from '../item/item.jsx';
 
 let container = null;
 beforeEach(() => {
