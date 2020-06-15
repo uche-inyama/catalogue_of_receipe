@@ -32,10 +32,9 @@
     ],
     "import/extensions": [
       "error",
-      "ignorePackages",
+      "always",
       {
         "js": "never",
-        "mjs": "never",
         "jsx": "never"
       }
     ],
