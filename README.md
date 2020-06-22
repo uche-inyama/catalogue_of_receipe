@@ -20,7 +20,7 @@ Additional description about the project and its features.
 - List of Recipes.
 - Recipe Detail page.
 
-## Potential Features
+## Future Features
 - Sign up.
 - Login.
 - Like and unlike a recipe.
