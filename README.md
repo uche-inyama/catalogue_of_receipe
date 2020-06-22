@@ -16,6 +16,17 @@ Additional description about the project and its features.
 - React
 - Redux
 
+## Features
+- List of Recipes.
+- Recipe Detail page.
+
+## Potential Features
+- Sign up.
+- Login.
+- like and unlike a recipe.
+- Write a post about a recipe.
+- Comment on a recipe post.
+
 ## Live Demo
 
 [Live Demo Link](https://practical-bose-9026ec.netlify.app/)
