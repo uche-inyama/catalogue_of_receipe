@@ -23,7 +23,7 @@ Additional description about the project and its features.
 ## Potential Features
 - Sign up.
 - Login.
-- like and unlike a recipe.
+- Like and unlike a recipe.
 - Write a post about a recipe.
 - Comment on a recipe post.
 
