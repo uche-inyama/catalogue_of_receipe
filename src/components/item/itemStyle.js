@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+const media = {
+  largeScreen: ` @media(min-width: 768px)`,
+  desktop: `@media(min-width: 992px)`
+}
 
 export const ItemWrap = styled.div`
   div{
@@ -9,6 +13,12 @@ export const ItemWrap = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+      ${media.largeScreen}{
+        height: 300px;
+      }
+      ${media.desktop}{
+        height: 350px;
+      }
       .image {
         width: 90%;
         height: 90%;
