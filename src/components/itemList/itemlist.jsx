@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Item from '../item/item.jsx';
-import style from './itemlist.module.css';
+import { ItemListWrap } from './itemListStyle';
 
 const Itemlist = ({ fetchRecipeLists, recipes }) => {
   useEffect(() => {
     fetchRecipeLists();
   }, []);
   return (
-    <div className={style.grid_List}>
+    <ItemListWrap >
       {recipes.map((recipe) => (
         <Item
           id={recipe.id}
@@ -17,7 +17,7 @@ const Itemlist = ({ fetchRecipeLists, recipes }) => {
           image={recipe.image}
         />
       ))}
-    </div>
+    </ItemListWrap>
   );
 };
 
