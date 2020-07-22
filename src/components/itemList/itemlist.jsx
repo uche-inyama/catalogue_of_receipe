@@ -1,31 +1,29 @@
-import React, { useEffect } from "react";
-import Item from "../item/item.jsx";
-import { fetchPosts } from "../../actions";
-import PropTypes from "prop-types";
-import style from "./itemlist.module.css";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import Item from '../item/item.jsx';
+import { ItemListWrap } from './itemListStyle';
 
-const Itemlist = ({ dispatch, recipes }) => {
+const Itemlist = ({ fetchRecipeLists, recipes }) => {
   useEffect(() => {
-    dispatch(fetchPosts());
+    fetchRecipeLists();
   }, []);
   return (
-    <div className={style.grid_List}>
+    <ItemListWrap >
       {recipes.map((recipe) => (
         <Item
           id={recipe.id}
           key={recipe.id}
           name={recipe.title}
-          timeToPrepare={recipe.readyInMinutes}
           image={recipe.image}
         />
       ))}
-    </div>
+    </ItemListWrap>
   );
 };
 
 Itemlist.propTypes = {
-  dispatch: PropTypes.func,
-  recipes: PropTypes.array,
+  fetchRecipeLists: PropTypes.func.isRequired,
+  recipes: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default Itemlist;

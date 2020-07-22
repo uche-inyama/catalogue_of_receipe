@@ -1,20 +1,19 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 import {
-  FILTER_ITEM,
   REQUEST_POSTS,
   RECEIVE_POSTS,
   INVALIDATE_RECIPE,
   RECEIVE_RECIPE,
   REQUEST_RECIPE,
-} from "./actions";
+} from '../action/actions';
 
-const recipePosts = (
+export const recipePosts = (
   state = {
     isFetching: false,
     didInvalidate: false,
     results: [],
   },
-  action
+  action,
 ) => {
   switch (action.type) {
     case INVALIDATE_RECIPE:
@@ -37,12 +36,12 @@ const recipePosts = (
   }
 };
 
-const detailedRecipeReducer = (
+export const detailedRecipeReducer = (
   state = {
     isFetching: false,
     recipe: null,
   },
-  action
+  action,
 ) => {
   switch (action.type) {
     case REQUEST_RECIPE:
@@ -61,9 +60,7 @@ const detailedRecipeReducer = (
   }
 };
 
-const reducer = combineReducers({
+export const reducer = combineReducers({
   recipes: recipePosts,
   detailedRecipe: detailedRecipeReducer,
 });
-
-export default reducer;

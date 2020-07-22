@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap");
+
+
 .item_detail {
+  display: flex;
+  flex-direction: column;
   background-color: #1d2026;
   color: #fcda9a;
   font-family: "sans-serif", Roboto;
   line-height: 2;
-  width: 100%;
+  padding-left: 10px;
+  width: 60%;
 }
+
 h3,
 .status {
   color: #fcda9a;
