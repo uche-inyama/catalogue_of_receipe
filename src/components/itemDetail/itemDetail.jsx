@@ -23,11 +23,13 @@ const ItemDetail = ({ fetchRecipeDetail, recipe, isFetching }) => {
     return (
       <>
         <h3>Recipe Instructions: </h3>
-        <ul className={style.item_detail}>
-          {steps.map(({ number, step }) => (
-            <li key={number}>{step}</li>
-          ))}
-        </ul>
+        <div className="item-Detail-List">
+          <ul className={style.item_detail}>
+            {steps.map(({ number, step }) => (
+              <li key={number}>{step}</li>
+            ))}
+          </ul>
+        </div>
       </>
     );
   }

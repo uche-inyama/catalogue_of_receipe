@@ -4,7 +4,7 @@ import ConnectedForm from './container/form';
 
 const App = () => (
   <div className="App">
-    {/* <ConnectedForm /> */}
+    <ConnectedForm />
     <Connecteditemslist />
   </div>
 );
